@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百观咨询 - 专注出海企业海外人才招聘</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: "Microsoft YaHei", sans-serif;}
+        body {background-color: #f8f9fa; color: #333;}
+        /* 导航栏样式 */
+        .nav {width: 100%; height: 80px; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 0; z-index: 999;}
+        .nav-container {width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 100%;}
+        .logo {font-size: 24px; font-weight: bold; color: #2c3e50; text-decoration: none;}
+        .nav-list {display: flex; list-style: none;}
+        .nav-list li {margin-left: 40px;}
+        .nav-list li a {text-decoration: none; color: #333; font-size: 16px; transition: color 0.3s;}
+        .nav-list li a:hover {color: #2980b9;}
+        /* Banner样式 */
+        .banner {margin-top: 80px; height: 500px; background: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url("https://picsum.photos/1920/500"); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center;}
+        .banner-content h1 {font-size: 48px; margin-bottom: 20px;}
+        .banner-content p {font-size: 20px; line-height: 1.8;}
+        /* 通用容器样式 */
+        .container {width: 1200px; margin: 60px auto; padding: 0 20px;}
+        /* 关于我们样式 */
+        .about {margin-bottom: 80px;}
+        .section-title {text-align: center; font-size: 32px; color: #2c3e50; margin-bottom: 40px; padding-bottom: 10px; border-bottom: 2px solid #2980b9;}
+        .about-content {display: flex; gap: 40px; align-items: center;}
+        .about-text {flex: 1;}
+        .about-text h3 {font-size: 24px; margin-bottom: 20px; color: #2980b9;}
+        .about-text p {font-size: 16px; line-height: 1.8; margin-bottom: 15px;}
+        .about-img {flex: 1;}
+        .about-img img {width: 100%; height: auto; border-radius: 8px;}
+        /* 核心业务样式 */
+        .service {margin-bottom: 80px; background-color: #fff; padding: 60px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05);}
+        .service-list {display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;}
+        .service-item {padding: 30px; border: 1px solid #eee; border-radius: 8px; transition: box-shadow 0.3s;}
+        .service-item:hover {box-shadow: 0 5px 20px rgba(0,0,0,0.08);}
+        .service-item h3 {font-size: 20px; color: #2980b9; margin-bottom: 15px;}
+        .service-item p {font-size: 16px; line-height: 1.6;}
+        /* 优势样式 */
+        .advantage {margin-bottom: 80px;}
+        .advantage-list {display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;}
+        .advantage-item {background-color: #fff; padding: 25px; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05);}
+        .advantage-item i {font-size: 40px; color: #2980b9; margin-bottom: 15px;}
+        .advantage-item h3 {font-size: 18px; margin-bottom: 10px;}
+        .advantage-item p {font-size: 14px; line-height: 1.5; color: #666;}
+        /* 成功案例样式 */
+        .case {margin-bottom: 80px; background-color: #fff; padding: 60px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05);}
+        .case-list {display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;}
+        .case-item {padding: 20px; border: 1px solid #eee; border-radius: 8px;}
+        .case-item h3 {font-size: 18px; color: #2c3e50; margin-bottom: 10px;}
+        .case-item p {font-size: 14px; line-height: 1.6; color: #666;}
+        /* 联系我们样式 */
+        .contact {margin-bottom: 60px;}
+        .contact-content {display: flex; gap: 40px;}
+        .contact-info {flex: 1; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);}
+        .contact-info h3 {font-size: 24px; color: #2980b9; margin-bottom: 20px;}
+        .contact-info p {font-size: 16px; line-height: 2; margin-bottom: 10px;}
+        .contact-form {flex: 1; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);}
+        .form-group {margin-bottom: 20px;}
+        .form-group label {display: block; font-size: 16px; margin-bottom: 8px; color: #333;}
+        .form-group input, .form-group textarea {width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 4px; font-size: 16px;}
+        .form-group textarea {height: 150px; resize: none;}
+        .btn {width: 100%; padding: 12px; background-color: #2980b9; color: #fff; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;}
+        .btn:hover {background-color: #1a5a7f;}
+        /* 底部样式 */
+        .footer {width: 100%; background-color: #2c3e50; color: #fff; padding: 40px 0;}
+        .footer-container {width: 1200px; margin: 0 auto; text-align: center;}
+        .footer p {font-size: 14px; line-height: 1.8; margin-bottom: 10px;}
+        /* 响应式适配 */
+        @media (max-width: 1200px) {
+            .nav-container, .container, .footer-container {width: 90%;}
+            .about-content, .contact-content {flex-direction: column;}
+            .service-list, .advantage-list, .case-list {grid-template-columns: 1fr;}
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">百观咨询</a>
+            <ul class="nav-list">
+                <li><a href="index.html">公司首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="service.html">核心业务</a></li>
+                <li><a href="advantage.html">我们的优势</a></li>
+                <li><a href="case.html">成功案例</a></li>
+                <li><a href="recruit.html">人才招聘</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首屏Banner -->
+    <div class="banner">
+        <div class="banner-content">
+            <h1>百观咨询</h1>
+            <p>专注出海企业，精准匹配海外人才，赋能企业全球化布局</p>
+        </div&gt;
+    &lt;/div&gt;
+
+    <!-- 关于我们（简介） -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>上海百观商务咨询有限公司</h3>
+                    <p>成立于2019年，专注为出海企业提供高效的海外人才招聘服务，深耕出海人才招聘领域多年，凭借专业的服务能力和广泛的海外人才资源，助力众多出海企业搭建核心海外团队，解决跨境招聘痛点。</p>
+                    <p>公司秉持“诚信、专业、高效、深耕出海领域”的企业文化，以客户需求为核心，精准匹配每一位海外人才，为出海企业的全球化布局保驾护航。</p>
+                    <p><a href="about.html" style="color: #2980b9; text-decoration: none;">查看更多 &gt;&gt;</a></p>
+                </div>
+                <div class="about-img">
+                    <img src="https://picsum.photos/600/400" alt="百观咨询办公环境">
+                </div>
+            </div>
+        </div&gt;
+    &lt;/section&gt;
+
+    <!-- 核心业务 -->
+    <section class="service">
+        <div class="container">
+            <h2 class="section-title">核心业务</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>海外人才寻访</h3>
+                    <p>为出海企业精准寻访海外中高端人才，覆盖多个行业，包括科技、制造、贸易等，根据企业需求定制寻访方案，快速匹配符合要求的人才。</p>
+                </div>
+                <div class="service-item">
+                    <h3>海外人才测评</h3>
+                    <p>提供专业的海外人才测评服务，从专业能力、语言能力、跨文化适应能力等多维度评估人才，确保人才与企业需求高度契合。</p>
+                </div>
+                <div class="service-item">
+                    <h3>出海企业人才解决方案</h3>
+                    <p>针对出海企业的人才布局需求，提供一站式人才解决方案，包括人才招聘、人才培养、团队搭建等，助力企业快速适应海外市场。</p>
+                </div>
+                <div class="service-item">
+                    <h3>跨境职场咨询</h3>
+                    <p>为出海企业和海外人才提供跨境职场咨询服务，解答跨境就业、人才管理、跨文化沟通等相关问题，提供专业的建议和指导。</p>
+                </div>
+            </div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    <!-- 我们的优势 -->
+    <section class="advantage">
+        <div class="container">
+            <h2 class="section-title">我们的优势</h2>
+            <div class="advantage-list">
+                <div class="advantage-item">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <h3>深耕行业5年+</h3>
+                    <p>成立于2019年，专注出海人才招聘，积累了丰富的行业经验和资源。</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>海外资源广泛</h3>
+                    <p>海外人才资源覆盖广泛，适配各类出海企业的人才需求，快速响应招聘需求。</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <h3>精准匹配率高</h3>
+                    <p>精准匹配率达85%+，凭借专业的筛选和测评，高效完成海外人才寻访。</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h3>一对一专属服务</h3>
+                    <p>为每一位客户提供一对一专属服务，全程跟进，贴合跨境招聘痛点。</p>
+                </div>
+            </div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    <!-- 成功案例 -->
+    <section class="case">
+        <div class="container">
+            <h2 class="section-title">成功案例</h2>
+            <div class="case-list">
+                <div class="case-item">
+                    <h3>科技出海企业人才寻访</h3>
+                    <p>为某出海科技公司寻访越南区域运营人才，深入了解企业需求，12天完成精准匹配，助力企业快速布局越南市场。</p>
+                </div>
+                <div class="case-item">
+                    <h3>制造企业海外团队搭建</h3>
+                    <p>助力某出海制造企业搭建海外销售团队，精准匹配5名核心销售人才，覆盖东南亚多个国家，提升企业海外市场占有率。</p>
+                </div>
+                <div class="case-item">
+                    <h3>跨境贸易人才解决方案</h3>
+                    <p>为某跨境贸易企业提供一站式人才解决方案，完成海外采购、销售、运营等多个岗位的招聘，优化企业海外人才布局。</p>
+                </div>
+            </div>
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    <!-- 联系我们 -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>联系方式</h3>
+                    <p><i class="fa-solid fa-phone" style="color: #2980b9; margin-right: 10px;"></i>联系电话：+86 15200826297（微信同号）</p>
+                    <p><i class="fa-solid fa-envelope" style="color: #2980b9; margin-right: 10px;"></i>联系邮箱：karl.shang@baiguan-consulting.com</p>
+                    <p><i class="fa-solid fa-map-marker-alt" style="color: #2980b9; margin-right: 10px;"></i>公司地址：越南河内òa nhà TTTM, số 125 Hoàng Ngân,Trung Hòa, Cầu Giấy, Hà Nội</p>
+                </div>
+                <div class="contact-form">
+                    <h3 style="font-size: 24px; color: #2980b9; margin-bottom: 20px; text-align: center;">留下您的需求</h3>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话</label>
+                            <input type="tel" id="phone" name="phone" placeholder="请输入您的联系电话" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">联系邮箱</label>
+                            <input type="email" id="email" name="email" placeholder="请输入您的联系邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="demand">您的需求</label>
+                            <textarea id="demand" name="demand" placeholder="请描述您的需求（如：海外人才招聘、人才解决方案等）" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">提交需求</button>
+                    </form>
+                </div>
+            </div>
+        </div&gt;
+    &lt;/section&gt;
+
+    <!-- 底部信息 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2019-2026 上海百观商务咨询有限公司 版权所有</p>
+            <p>域名：baiguan-consulting.com</p>
+            <p>隐私政策 | 免责声明</p>
+        </div>
+    </footer>
+</body>
+</html>
