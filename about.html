@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 百观咨询</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: "Microsoft YaHei", sans-serif;}
+        body {background-color: #f8f9fa; color: #333;}
+        /* 导航栏样式 */
+        .nav {width: 100%; height: 80px; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 0; z-index: 999;}
+        .nav-container {width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 100%;}
+        .logo {font-size: 24px; font-weight: bold; color: #2c3e50; text-decoration: none;}
+        .nav-list {display: flex; list-style: none;}
+        .nav-list li {margin-left: 40px;}
+        .nav-list li a {text-decoration: none; color: #333; font-size: 16px; transition: color 0.3s;}
+        .nav-list li a:hover {color: #2980b9;}
+        /* 通用容器样式 */
+        .container {width: 1200px; margin: 120px auto 60px; padding: 0 20px;}
+        /* 关于我们样式 */
+        .about {background-color: #fff; padding: 60px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05);}
+        .section-title {text-align: center; font-size: 32px; color: #2c3e50; margin-bottom: 40px; padding-bottom: 10px; border-bottom: 2px solid #2980b9;}
+        .about-content {margin-bottom: 40px;}
+        .about-content h3 {font-size: 24px; color: #2980b9; margin-bottom: 20px;}
+        .about-content p {font-size: 16px; line-height: 1.8; margin-bottom: 15px;}
+        /* 企业文化样式 */
+        .culture {margin-bottom: 40px;}
+        .culture h3 {font-size: 24px; color: #2980b9; margin-bottom: 20px;}
+        .culture-list {display: flex; gap: 30px; justify-content: center;}
+        .culture-item {text-align: center; padding: 20px; flex: 1; border: 1px solid #eee; border-radius: 8px;}
+        .culture-item i {font-size: 30px; color: #2980b9; margin-bottom: 10px;}
+        .culture-item h4 {font-size: 18px; margin-bottom: 10px;}
+        .culture-item p {font-size: 14px; color: #666;}
+        /* 团队介绍样式 */
+        .team h3 {font-size: 24px; color: #2980b9; margin-bottom: 20px;}
+        .team-list {display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;}
+        .team-item {text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 8px;}
+        .team-item img {width: 120px; height: 120px; border-radius: 50%; margin-bottom: 15px;}
+        .team-item h4 {font-size: 18px; margin-bottom: 5px;}
+        .team-item p {font-size: 14px; color: #666;}
+        /* 底部样式 */
+        .footer {width: 100%; background-color: #2c3e50; color: #fff; padding: 40px 0;}
+        .footer-container {width: 1200px; margin: 0 auto; text-align: center;}
+        .footer p {font-size: 14px; line-height: 1.8; margin-bottom: 10px;}
+        /* 响应式适配 */
+        @media (max-width: 1200px) {
+            .nav-container, .container, .footer-container {width: 90%;}
+            .culture-list, .team-list {flex-direction: column; grid-template-columns: 1fr;}
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+&lt;/head&gt;
+&lt;body&gt;
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">百观咨询</a>
+            <ul class="nav-list">
+                <li><a href="index.html">公司首页</a></li>
+                <li><a href="about.html" style="color: #2980b9;">关于我们</a></li>
+                <li><a href="service.html">核心业务</a></li>
+                <li><a href="advantage.html">我们的优势</a></li>
+                <li><a href="case.html">成功案例</a></li>
+                <li><a href="recruit.html">人才招聘</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 关于我们主体内容 -->
+    <div class="container">
+        <section class="about">
+            <h2 class="section-title">关于我们</h2>
+            
+            <div class="about-content">
+                <h3>公司简介</h3>
+                <p>上海百观商务咨询有限公司成立于2019年，是一家专注于为出海企业提供海外人才招聘服务的专业猎头公司。自成立以来，我们始终聚焦出海领域，深耕海外人才招聘市场，凭借专业的服务能力、广泛的海外人才资源和高效的匹配效率，赢得了众多出海企业的信任和认可。</p>
+                <p>我们的核心定位是“赋能出海企业，精准匹配海外人才”，致力于为各类出海企业（包括科技、制造、贸易、服务等行业）提供全方位、一站式的海外人才招聘解决方案，帮助企业快速搭建核心海外团队，解决跨境招聘过程中的痛点和难点，助力企业实现全球化布局。</p>
+                <p>经过多年的发展，我们的海外人才资源覆盖东南亚、欧美等多个地区，积累了丰富的行业经验和人才数据库，能够快速响应企业的招聘需求，为企业精准匹配符合岗位要求的中高端人才，帮助企业降低招聘成本、提高招聘效率。</p>
+            </div>
+
+            <div class="culture">
+                <h3>企业文化</h3>
+                <div class="culture-list">
+                    <div class="culture-item">
+                        <i class="fa-solid fa-handshake"></i>
+                        <h4>诚信</h4>
+                        <p>坚守诚信原则，坦诚对待每一位客户和人才，坚守行业底线，赢得长久信任。</p>
+                    </div>
+                    <div class="culture-item">
+                        <i class="fa-solid fa-brain"></i>
+                        <h4>专业</h4>
+                        <p>深耕出海人才招聘领域，提升专业服务能力，为客户和人才提供专业、高效的服务。</p>
+                    </div>
+                    <div class="culture-item">
+                        <i class="fa-solid fa-rocket"></i>
+                        <h4>高效</h4>
+                        <p>快速响应客户需求，优化招聘流程，缩短招聘周期，为企业节省时间成本。</p>
+                    </div>
+                    <div class="culture-item">
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <h4>深耕出海</h4>
+                        <p>聚焦出海领域，深入了解海外市场和人才特点，为企业提供贴合需求的招聘服务。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team">
+                <h3>团队介绍</h3>
+                <div class="team-list">
+                    <div class="team-item">
+                        <img src="https://picsum.photos/120/120?random=1" alt="团队成员">
+                        <h4>张经理</h4>
+                        <p>首席顾问，10年出海人才招聘经验，擅长海外中高端人才寻访。</p>
+                    </div>
+                    <div class="team-item">
+                        <img src="https://picsum.photos/120/120?random=2" alt="团队成员">
+                        <h4>李顾问</h4>
+                        <p>资深顾问，专注东南亚人才招聘，熟悉当地人才市场特点。</p>
+                    </div>
+                    <div class="team-item">
+                        <img src="https://picsum.photos/120/120?random=3" alt="团队成员">
+                        <h4>王顾问</h4>
+                        <p>人才测评专家，擅长从多维度评估海外人才，确保人才适配。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-short" style="margin-top: 40px; text-align: center; padding: 20px; border-top: 1px solid #eee;">
+                <h3 style="font-size: 20px; color: #2980b9; margin-bottom: 15px;">联系我们</h3>
+                <p style="font-size: 16px; line-height: 1.8;">联系电话：+86 15200826297（微信同号） | 联系邮箱：karl.shang@baiguan-consulting.com</p>
+                <p style="font-size: 16px;">公司地址：越南河内òa nhà TTTM, số 125 Hoàng Ngân,Trung Hòa, Cầu Giấy, Hà Nội</p>
+            </div>
+        &lt;/section&gt;
+    &lt;/div&gt;
+
+    <!-- 底部信息 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2019-2026 上海百观商务咨询有限公司 版权所有</p>
+            <p>域名：baiguan-consulting.com</p>
+            <p>隐私政策 | 免责声明</p>
+        </div>
+    </footer>
+</body>
+</html>
